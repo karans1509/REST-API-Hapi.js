@@ -1,3 +1,4 @@
+const Boom = require('boom');
 const Joi = require('joi');
 const monk = require('monk');
 

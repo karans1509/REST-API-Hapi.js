@@ -1,4 +1,4 @@
-const Boom = require('Boom');
+const Boom = require('boom');
 const Hapi = require('hapi');
 const Joi = require('joi');
 

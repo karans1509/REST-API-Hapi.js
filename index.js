@@ -8,7 +8,7 @@ const server = new Hapi.Server();
 
 server.connection({
     host : 'localhost',
-    port : process.env.port
+    port : process.env.PORT || 8080
 })
 
 server.register(require('hapi-auth-jwt'), (err)=>{

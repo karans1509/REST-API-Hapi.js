@@ -30,37 +30,37 @@ The app has been deployed on heroku and is available at the url - https://fathom
  
    - Response - A user without admin access will be created and you will get a token in the response which you will need to provide at the below routes.It will be valid only for two hours. If you try to post again with the same email, you will get an error message saying "Email already registered". 
  
-Path - /users
-  Action - GET
-  Authorization - Admin access required.
-  Response - A list of all the users with their details.
+2. - Path - /users
+   - Action - GET
+   - Authorization - Admin access required.
+   - Response - A list of all the users with their details.
   
- Path - /users?late_fee
-  Action - GET
-  Authorization - Admin access required.
-  Response - A list of all the users with late_fee.
+3. - Path - /users?late_fee
+   - Action - GET
+   - Authorization - Admin access required.
+   - Response - A list of all the users with late_fee.
   
- Path - /users/{emailId}
-  Action - GET
-  Authorization - Any authenticated user can access it.
-  Response - Details of the user with the email id provided as the parameter.
+4. - Path - /users/{emailId}
+   - Action - GET
+   - Authorization - Any authenticated user can access it.
+   - Response - Details of the user with the email id provided as the parameter.
   
- Path - /users/auth
-  Action - POST
-  Payload - It should be a JSON object with an already registered "email".
-  Authorization - Not required
-  Response - A token to access the routes. This route is provided for any returning user who wants to access the resources.
+5. - Path - /users/auth
+   - Action - POST
+   - Payload - It should be a JSON object with an already registered "email".
+   - Authorization - Not required
+   - Response - A token to access the routes. This route is provided for any returning user who wants to access the resources.
   
- Path - /users/{id} , here {id} is the "_id" attribute generated automatically by mongodb for every user in the database.
-  Action - PUT
-  Payload - A JSON object with at least one of these fields - "email", "booksBorrowed", "booksReserved", "lateFee". 
-  Authorization - Only admin access
-  Response - "User data modified"
+6. - Path - /users/{id} , here {id} is the "_id" attribute generated automatically by mongodb for every user in the database.
+   - Action - PUT
+   - Payload - A JSON object with at least one of these fields - "email", "booksBorrowed", "booksReserved", "lateFee". 
+   - Authorization - Only admin access
+   - Response - "User data modified"
   
- Path - /users/{id} , {id} is "_id"
-  Action - DELETE
-  Authorization - Only admin access
-  Response - "User deleted from database"
+7. - Path - /users/{id} , {id} is "_id"
+   - Action - DELETE
+   - Authorization - Only admin access
+   - Response - "User deleted from database"
   
   
   ### Books

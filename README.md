@@ -2,8 +2,8 @@
 Book lending API with Hapi.js and JWT authentication
 
 ## Team Members
-Karan Saini ( 100290458 )
-Dilpreet Kaur Sanghera ( 100288689 )
+* Karan Saini ( 100290458 )
+* Dilpreet Kaur Sanghera ( 100288689 )
 
 ## Instructions for Testing
 The app has been deployed on heroku and is available at the url - https://fathomless-plains-76558.herokuapp.com. For the routes that require authorization, in the Authorization tab in POSTMAN, select Bearer Token from the dropdown and provide your token. Below are the various routes.

@@ -8,7 +8,7 @@ Dilpreet Kaur Sanghera ( 100288689 )
 ## Instructions for Testing
 The app has been deployed on heroku and is available at the url - https://fathomless-plains-76558.herokuapp.com. For the routes that require authorization, in the Authorization tab in POSTMAN, select Bearer Token from the dropdown and provide your token. Below are the various routes.
 
-###Users
+### Users
 
   Path - /users
   Action - POST
@@ -63,7 +63,7 @@ Path - /users
   Response - "User deleted from database"
   
   
-  ###Books
+  ### Books
   
  Path - /books
   Action - GET

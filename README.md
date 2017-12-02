@@ -10,10 +10,10 @@ The app has been deployed on heroku and is available at the url - https://fathom
 
 ### Users
 
-  Path - /users
-  Action - POST
-  Authorization - Not required
-  Payload should be a JSON object like this - 
+1. - Path - /users
+   - Action - POST
+   - Authorization - Not required
+   - Payload should be a JSON object like this - 
   {
     "email": "test@gmail.com",
         "booksBorrowed": [
@@ -28,7 +28,7 @@ The app has been deployed on heroku and is available at the url - https://fathom
         "lateFee": 10
  }
  
- Response - A user without admin access will be created and you will get a token in the response which you will need to provide at the below routes.It will be valid only for two hours. If you try to post again with the same email, you will get an error message saying "Email already registered". 
+   - Response - A user without admin access will be created and you will get a token in the response which you will need to provide at the below routes.It will be valid only for two hours. If you try to post again with the same email, you will get an error message saying "Email already registered". 
  
 Path - /users
   Action - GET

@@ -65,29 +65,29 @@ The app has been deployed on heroku and is available at the url - https://fathom
   
   ### Books
   
- Path - /books
-  Action - GET
-  Authorization - Any authenticated user can access
-  Response - List of all the books
+1. - Path - /books
+   - Action - GET
+   - Authorization - Any authenticated user can access
+   - Response - List of all the books
   
- Path - /books?genre=fanstasy , search by genre
-  Action - GET
-  Authorization - Any authenticated user can access
-  Response - List of all the books with the given genre
+2. - Path - /books?genre=fanstasy , search by genre
+   - Action - GET
+   - Authorization - Any authenticated user can access
+   - Response - List of all the books with the given genre
   
- Path - /books?title=prisoner , search by entering keywords of the title of the book
-  Action - GET
-  Authorization - Any authenticated user can access
-  Response - List of all the books which contain those keywords
+3. - Path - /books?title=prisoner , search by entering keywords of the title of the book
+   - Action - GET
+   - Authorization - Any authenticated user can access
+   - Response - List of all the books which contain those keywords
   
- Path - /books?author=JK Rowling , search by author
-  Action - GET
-  Authorization - Any authenticated user can access
-  Response - List of all the books by the specified author
+4. - Path - /books?author=JK Rowling , search by author
+   - Action - GET
+   - Authorization - Any authenticated user can access
+   - Response - List of all the books by the specified author
   
- Path - /books
-  Action - POST
-  Payload - It should be a JSON object like this - 
+5. - Path - /books
+   - Action - POST
+   - Payload - It should be a JSON object like this - 
     {
         "title": "Half Blood Prince",
         "author": "JK Rowling",
@@ -102,25 +102,25 @@ The app has been deployed on heroku and is available at the url - https://fathom
             "edition": "first",
             "borrowedBy": "Dilpreet"
         }
-}
-  Authorization - Any authenticated user can access.
-  Response - Data Inserted
+    }
+   - Authorization - Any authenticated user can access.
+   - Response - Data Inserted
   
- Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
-  Action - GET
-  Authorization - Any authenticated user
-  Response - Details about the book with {id}
+6. - Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
+   - Action - GET
+   - Authorization - Any authenticated user
+   - Response - Details about the book with {id}
   
- Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
-  Action - PUT
-  Payload - A JSON object containing at least one of these four fields - "title, "author", "publication", "availability".
-  Authorization - Any authenticated user
-  Response - Book Data modified
+7. - Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
+   - Action - PUT
+   - Payload - A JSON object containing at least one of these four fields - "title, "author", "publication", "availability".
+   - Authorization - Any authenticated user
+   - Response - Book Data modified
   
- Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
-  Action - DELETE
-  Authorization - Admin access required
-  Response - Book Deleted from database
+8. - Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
+   - Action - DELETE
+   - Authorization - Admin access required
+   - Response - Book Deleted from database
   
   
   

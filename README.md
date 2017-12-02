@@ -10,7 +10,7 @@ The app has been deployed on heroku and is available at the url - https://fathom
 
 ###Users
 
-* Path - /users
+  Path - /users
   Action - POST
   Authorization - Not required
   Payload should be a JSON object like this - 
@@ -30,34 +30,34 @@ The app has been deployed on heroku and is available at the url - https://fathom
  
  Response - A user without admin access will be created and you will get a token in the response which you will need to provide at the below routes.It will be valid only for two hours. If you try to post again with the same email, you will get an error message saying "Email already registered". 
  
-* Path - /users
+Path - /users
   Action - GET
   Authorization - Admin access required.
   Response - A list of all the users with their details.
   
-* Path - /users?late_fee
+ Path - /users?late_fee
   Action - GET
   Authorization - Admin access required.
   Response - A list of all the users with late_fee.
   
-* Path - /users/{emailId}
+ Path - /users/{emailId}
   Action - GET
   Authorization - Any authenticated user can access it.
   Response - Details of the user with the email id provided as the parameter.
   
-* Path - /users/auth
+ Path - /users/auth
   Action - POST
   Payload - It should be a JSON object with an already registered "email".
   Authorization - Not required
   Response - A token to access the routes. This route is provided for any returning user who wants to access the resources.
   
-* Path - /users/{id} , here {id} is the "_id" attribute generated automatically by mongodb for every user in the database.
+ Path - /users/{id} , here {id} is the "_id" attribute generated automatically by mongodb for every user in the database.
   Action - PUT
   Payload - A JSON object with at least one of these fields - "email", "booksBorrowed", "booksReserved", "lateFee". 
   Authorization - Only admin access
   Response - "User data modified"
   
-* Path - /users/{id} , {id} is "_id"
+ Path - /users/{id} , {id} is "_id"
   Action - DELETE
   Authorization - Only admin access
   Response - "User deleted from database"
@@ -65,27 +65,27 @@ The app has been deployed on heroku and is available at the url - https://fathom
   
   ###Books
   
-* Path - /books
+ Path - /books
   Action - GET
   Authorization - Any authenticated user can access
   Response - List of all the books
   
-* Path - /books?genre=fanstasy , search by genre
+ Path - /books?genre=fanstasy , search by genre
   Action - GET
   Authorization - Any authenticated user can access
   Response - List of all the books with the given genre
   
-* Path - /books?title=prisoner , search by entering keywords of the title of the book
+ Path - /books?title=prisoner , search by entering keywords of the title of the book
   Action - GET
   Authorization - Any authenticated user can access
   Response - List of all the books which contain those keywords
   
-* Path - /books?author=JK Rowling , search by author
+ Path - /books?author=JK Rowling , search by author
   Action - GET
   Authorization - Any authenticated user can access
   Response - List of all the books by the specified author
   
-* Path - /books
+ Path - /books
   Action - POST
   Payload - It should be a JSON object like this - 
     {
@@ -106,18 +106,18 @@ The app has been deployed on heroku and is available at the url - https://fathom
   Authorization - Any authenticated user can access.
   Response - Data Inserted
   
-* Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
+ Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
   Action - GET
   Authorization - Any authenticated user
   Response - Details about the book with {id}
   
-* Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
+ Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
   Action - PUT
   Payload - A JSON object containing at least one of these four fields - "title, "author", "publication", "availability".
   Authorization - Any authenticated user
   Response - Book Data modified
   
-* Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
+ Path - /books/{id} , {id} is the "_id" attribute auto-generated for every book added to mongodb
   Action - DELETE
   Authorization - Admin access required
   Response - Book Deleted from database
